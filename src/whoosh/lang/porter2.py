@@ -159,6 +159,7 @@ def step_2_helper(word, r1, end, repl, prev):
 
 
 s2_triples = (('ization', 'ize', []),
+               ('isation', 'ise', []),
                ('ational', 'ate', []),
                ('fulness', 'ful', []),
                ('ousness', 'ous', []),
@@ -177,6 +178,7 @@ s2_triples = (('ization', 'ize', []),
                ('anci', 'ance', []),
                ('abli', 'able', []),
                ('izer', 'ize', []),
+               ('iser', 'ise', []),
                ('ator', 'ate', []),
                ('alli', 'al', []),
                ('bli', 'ble', []),
@@ -207,6 +209,7 @@ def step_3_helper(word, r1, r2, end, repl, r2_necessary):
 s3_triples = (('ational', 'ate', False),
                ('tional', 'tion', False),
                ('alize', 'al', False),
+               ('alise', 'al', False),
                ('icate', 'ic', False),
                ('iciti', 'ic', False),
                ('ative', '', True),
@@ -224,7 +227,8 @@ def step_3(word, r1, r2):
 
 
 s4_delete_list = ('al', 'ance', 'ence', 'er', 'ic', 'able', 'ible', 'ant', 'ement',
-                  'ment', 'ent', 'ism', 'ate', 'iti', 'ous', 'ive', 'ize')
+                  'ment', 'ent', 'ism', 'ate', 'iti', 'ous', 'ive', 'ize',
+                  'ise')
 
 
 def step_4(word, r2):
